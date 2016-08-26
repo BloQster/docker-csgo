@@ -12,7 +12,7 @@ RUN groupadd -r csgo \
 
 RUN dpkg --add-architecture i386 \
  && apt update \
- && apt install mailutils postfix curl wget file gzip bzip2 bsdmainutils python util-linux tmux lib32gcc1 libstdc++6 libstdc++6:i386
+ && apt install mailutils postfix curl wget file gzip bzip2 bsdmainutils python util-linux tmux lib32gcc1 libstdc++6 libstdc++6:i386 \
  && rm -r /var/lib/apt/lists/* \
  && wget ${CSGOSERVER_DOWNLOADLINK} -O ${CSGOSERVER_SCRIPT}
  && chmod +x ${CSGOSERVER_SCRIPT}
